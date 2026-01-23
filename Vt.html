@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Web App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: #333;
+      padding: 12px;
+    }
+    nav a {
+      color: white;
+      margin-right: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .page {
+      display: none;
+      padding: 20px;
+    }
+    .active {
+      display: block;
+    }
+    h1 {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a onclick="showPage('electronics')">Electronics</a>
+    <a onclick="showPage('automobile')">Automobile</a>
+    <a onclick="showPage('clothing')">Clothing</a>
+  </nav>
+
+  <div id="electronics" class="page active">
+    <h1>Electronics</h1>
+    <p>Explore latest gadgets like mobiles, laptops, and accessories.</p>
+  </div>
+
+  <div id="automobile" class="page">
+    <h1>Automobile</h1>
+    <p>Find cars, bikes, and automobile accessories.</p>
+  </div>
+
+  <div id="clothing" class="page">
+    <h1>Clothing</h1>
+    <p>Shop men’s, women’s, and kids’ clothing collections.</p>
+  </div>
+
+  <script>
+    function showPage(pageId) {
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(page => page.classList.remove('active'));
+      document.getElementById(pageId).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
