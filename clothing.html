@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Clothing</title>
+  <style>
+    body { font-family: Arial; margin: 0; }
+    nav { background: #333; padding: 12px; }
+    nav a { color: white; margin-right: 20px; text-decoration: none; font-weight: bold; }
+    form { max-width: 400px; margin-top: 20px; }
+    label { display: block; margin-top: 10px; }
+    input, select, button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+    button { background: #333; color: white; border: none; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Electronics</a>
+  <a href="automobile.html">Automobile</a>
+  <a href="clothing.html">Clothing</a>
+</nav>
+
+<h1>Clothing</h1>
+<p>Shop men’s, women’s, and kids’ clothing collections.</p>
+
+<h2>Get Latest Offers</h2>
+
+<form id="clothingForm">
+  <label>Name</label>
+  <input type="text" name="name" required />
+
+  <label>Email</label>
+  <input type="email" name="email" required />
+
+  <label>Category</label>
+  <select name="category">
+    <option>Men</option>
+    <option>Women</option>
+    <option>Kids</option>
+  </select>
+
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+  document.getElementById("clothingForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("Form submitted successfully!");
+  });
+</script>
+
+</body>
+</html>
