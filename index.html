@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<script src="https://cdn.c360a.salesforce.com/beacon/c360a/72a66636-3046-4f3f-b5b1-8cf06da29227/scripts/c360a.min.js%22></script>
+<script>
+	SalesforceInteractions.init({
+   consents: [
+        { 
+            purpose: 'Tracking', 
+            provider: 'OneTrust', 
+            status: SalesforceInteractions.ConsentStatus.OptIn 
+        }
+   ]
+}).then(()=>{
+	console.log('init successful');
+});
+</script>
+
+	
   <meta charset="UTF-8" />
   <title>Electronics</title>
   <style>
@@ -21,21 +38,8 @@
 <p>Explore latest gadgets like mobiles, laptops, and accessories.</p>
 
 </body>
-<script src="https://cdn.c360a.salesforce.com/beacon/c360a/72a66636-3046-4f3f-b5b1-8cf06da29227/scripts/c360a.min.js%22></script>
-<script>
-	SalesforceInteractions.init({
-   consents: [
-        { 
-            purpose: 'Tracking', 
-            provider: 'OneTrust', 
-            status: SalesforceInteractions.ConsentStatus.OptIn 
-        }
-   ]
-}).then(()=>{
-	console.log('init successful');
-});
-</script>
 
   
 </html>
+
 
