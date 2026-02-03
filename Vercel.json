@@ -1,8 +1,13 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "routes": [
+    {
+      "src": "/.*/",
+      "dest": "/",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/submit-lead",
+      "dest": "https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DKY00000BF3z9"
+    }
+  ]
 }
-
-
-
-
-
